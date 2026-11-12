@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Simple Apollo ELD driver help guide for iPhone and Android.">
+<title>Apollo ELD | Driver Help Center</title>
+<style>
+:root{--navy:#102b46;--blue:#1769aa;--pale:#eef5fb;--ink:#17212b;--muted:#617181;--line:#dce4eb;--green:#17834b}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.55 Arial,Helvetica,sans-serif}
+header{background:var(--navy);color:white;padding:22px 18px}
+.wrap{max-width:1050px;margin:auto;padding:0 16px}
+.brand{font-weight:800;font-size:25px;letter-spacing:.2px}.sub{color:#d5e4f1;margin-top:4px}
+main{padding:22px 0 50px}.intro{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:18px}
+h1{font-size:25px;line-height:1.2;margin:0 0 8px}h2{font-size:21px;margin:0 0 10px}h3{font-size:18px;margin:0 0 8px}
+p{margin:8px 0}.muted{color:var(--muted);font-size:14px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+button,.tab{border:0;border-radius:10px;padding:13px 17px;font-weight:700;font-size:16px;cursor:pointer}
+button.primary,.tab.active{background:var(--blue);color:white}.tab{background:#e8eef4;color:var(--navy)}
+.search{width:100%;padding:15px;border:1px solid #cbd5df;border-radius:11px;font-size:17px;margin:15px 0 6px}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:18px;align-items:start}
+nav,.content{background:white;border:1px solid var(--line);border-radius:15px;padding:14px}
+nav{position:sticky;top:12px}nav button{display:block;width:100%;text-align:left;background:white;color:var(--ink);padding:12px;margin:2px 0;font-weight:600}
+nav button.active{background:var(--pale);color:var(--blue)}
+.section{display:none}.section.active{display:block}
+.step{border:1px solid var(--line);border-radius:13px;padding:16px;margin:13px 0;background:white}
+.stepnum{display:inline-flex;background:var(--pale);color:var(--blue);font-weight:800;border-radius:50%;width:30px;height:30px;align-items:center;justify-content:center;margin-right:7px}
+ul{padding-left:23px}li{margin:8px 0}
+figure{margin:14px 0 4px}figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:9px;background:#fff}
+figcaption{font-size:13px;color:var(--muted);margin-top:5px}
+.callout{background:#fff7df;border-left:4px solid #e1a52b;padding:12px 14px;border-radius:8px;margin:14px 0}
+.good{background:#eaf7ef;border-left:4px solid var(--green);padding:12px 14px;border-radius:8px;margin:14px 0}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:25px}
+.hidden{display:none!important}
+@media(max-width:760px){.layout{grid-template-columns:1fr}nav{position:static;display:grid;grid-template-columns:1fr 1fr;gap:3px}nav button{font-size:14px;padding:10px}.brand{font-size:22px}h1{font-size:23px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">APOLLO ELD</div><div class="sub">Driver Help Center · Simple step-by-step instructions</div></div></header>
+<main class="wrap">
+<section class="intro">
+<h1>Need help with your ELD?</h1>
+<p>Choose your phone, then choose the task you need help with. Follow the steps and compare your screen with the pictures.</p>
+<div class="controls">
+<button class="tab active" data-platform="ios">iPhone / iOS</button>
+<button class="tab" data-platform="android">Android</button>
+</div>
+<input id="search" class="search" type="search" placeholder="Search: login, Bluetooth, logs, DVIR...">
+<div class="muted">For your safety: do not use your phone while driving. Pull over and park before using the app.</div>
+</section>
+<div class="layout">
+<nav id="menu" aria-label="Guide topics">
+<button class="active" data-section="start">1. Before you start</button>
+<button data-section="login">2. Log in</button>
+<button data-section="vehicle">3. Select your truck</button>
+<button data-section="connect">4. Connect the ELD</button>
+<button data-section="dashboard">5. Main screen</button>
+<button data-section="status">6. Change duty status</button>
+<button data-section="certify">7. Certify your logs</button>
+<button data-section="roadside">8. Roadside inspection</button>
+<button data-section="dvir">9. Vehicle inspection (DVIR)</button>
+<button data-section="fix">10. Common problems</button>
+</nav>
+<div class="content">
+<section class="section active" id="start" data-search="before start setup bluetooth internet app engine ECM">
+<h2>Before you start</h2>
+<p>Make sure you have these things ready:</p>
+<div class="step"><span class="stepnum">1</span><b>Your phone</b><ul><li>Turn Bluetooth ON.</li><li>Connect to the internet using cellular data or Wi-Fi.</li><li>Allow Apollo ELD to use Bluetooth, location and network access.</li></ul></div>
+<div class="step"><span class="stepnum">2</span><b>Your truck and ELD device</b><ul><li>The ECM device must be plugged into the truck's diagnostic port.</li><li>Turn the truck engine ON when connecting and checking engine data.</li><li>Have your driver username and password ready.</li></ul></div>
+<figure><img data-image="setup" alt="Original Apollo guide setup illustration"><figcaption>Picture from the official Apollo ELD driver guide.</figcaption></figure>
+<div class="callout"><b>Important:</b> Keep the ELD connected to the ECM so it can read engine data.</div>
+</section>
+<section class="section" id="login" data-search="login sign in username password driver account">
+<h2>Log in to Apollo ELD</h2>
+<div class="step"><span class="stepnum">1</span>Open the <b>apolloELD</b> app.</div>
+<div class="step"><span class="stepnum">2</span>Enter your driver username and password.</div>
+<div class="step"><span class="stepnum">3</span>Tap <b>Login</b> and wait for your information to load.</div>
+<figure><img data-image="login" alt="Apollo ELD login screen from the original guide"><figcaption>Original app example. Your screen may look slightly different.</figcaption></figure>
+<div class="callout"><b>Login problem?</b> Check your username, password and internet connection. One driver account can only be logged in on one ELD at a time. If your old device is lost or not working, contact your carrier to request an account unlock.</div>
+</section>
+<section class="section" id="vehicle" data-search="truck tractor trailer vehicle asset odometer">
+<h2>Select your truck and trailer</h2>
+<div class="step"><span class="stepnum">1</span>Tap the <b>truck</b> picture to select your tractor.</div>
+<div class="step"><span class="stepnum">2</span>Select the correct truck from your company list.</div>
+<div class="step"><span class="stepnum">3</span>If your company allows it, select the <b>+</b> button to add a vehicle.</div>
+<div class="step"><span class="stepnum">4</span>Enter the dashboard odometer reading twice when requested.</div>
+<figure><img data-image="vehicle" alt="Original Apollo vehicle selection guide image"><figcaption>Vehicle selection example from the official guide.</figcaption></figure>
+<div class="callout">Make sure the truck and trailer information is correct before you continue.</div>
+</section>
+<section class="section" id="connect" data-search="connect bluetooth ECM scan devices engine synchronization">
+<h2>Connect your ELD to the truck</h2>
+<div class="step"><span class="stepnum">1</span>Turn the truck engine ON.</div>
+<div class="step"><span class="stepnum">2</span>Make sure Bluetooth is ON on your phone.</div>
+<div class="step"><span class="stepnum">3</span>In Apollo ELD, open <b>Scan Devices</b>.</div>
+<div class="step"><span class="stepnum">4</span>Choose the correct ECM device ID and wait for the connection.</div>
+<figure><img data-image="connect" alt="Original Apollo scan devices guide image"><figcaption>Look for the ECM device ID assigned to your truck.</figcaption></figure>
+<div class="good"><b>Connection check:</b> Bluetooth and ECM indicators should be green. If an indicator is red, open Scan Devices and reconnect to the correct ECM device.</div>
+</section>
+<section class="section" id="dashboard" data-search="main screen dashboard driving time on duty cycle malfunction">
+<h2>Understand the main screen</h2>
+<p>The main screen shows your current duty status and available time.</p>
+<div class="step"><ul><li><b>Driving:</b> driving time used and available.</li><li><b>On Duty:</b> on-duty time used and available.</li><li><b>Cycle:</b> cycle on-duty time remaining.</li><li><b>Current Status:</b> your status right now.</li><li><b>Malfunction indicator:</b> tap it to see more information.</li><li><b>Roadside Inspection Mode:</b> use this when an officer stops you.</li></ul></div>
+<figure><img data-image="dashboard" alt="Apollo ELD main screen from original driver guide"><figcaption>Main screen example. The exact layout can vary by phone.</figcaption></figure>
+</section>
+<section class="section" id="status" data-search="change duty status off duty sleeper berth driving on duty personal yard">
+<h2>Change your duty status</h2>
+<div class="step"><span class="stepnum">1</span>Park safely before using your phone.</div>
+<div class="step"><span class="stepnum">2</span>Tap the duty status you need, such as <b>Off Duty</b>, <b>Sleeper</b> or <b>On Duty</b>.</div>
+<div class="step"><span class="stepnum">3</span>If the app asks for a remark, choose one from the list or enter your reason.</div>
+<figure><img data-image="status" alt="Apollo duty status screen from original driver guide"><figcaption>Duty status and remarks example.</figcaption></figure>
+<div class="callout"><b>Personal Use (PU) and Yard Move (YM):</b> Use these only when allowed by your carrier and applicable rules. Select the correct option before moving the truck. The guide says Yard Move automatically changes to Driving if speed exceeds 20 mph.</div>
+</section>
+<section class="section" id="certify" data-search="certify logs certify records logbook">
+<h2>Certify your logs</h2>
+<div class="step"><span class="stepnum">1</span>Open the main menu.</div>
+<div class="step"><span class="stepnum">2</span>Select <b>Certify Logs</b>.</div>
+<div class="step"><span class="stepnum">3</span>Select the day or 24-hour period you need to certify.</div>
+<div class="step"><span class="stepnum">4</span>Tap <b>Certify</b> and agree to the statement shown.</div>
+<figure><img data-image="certify" alt="Apollo certify logs screen from original guide"><figcaption>Certify Logs example from the guide.</figcaption></figure>
+<div class="callout">The Apollo guide says duty status changes must be certified before exporting your logs.</div>
+</section>
+<section class="section" id="roadside" data-search="roadside inspection DOT MTO export logs print display data file">
+<h2>Roadside inspection</h2>
+<div class="step"><span class="stepnum">1</span>When safely stopped, open <b>Roadside Inspection Mode</b>.</div>
+<div class="step"><span class="stepnum">2</span>Choose the option requested by the officer: <b>Print/Display Logs</b> or <b>Export ELD Data File</b>.</div>
+<div class="step"><span class="stepnum">3</span>Follow the app instructions to display or send the file.</div>
+<figure><img data-image="roadside" alt="Apollo roadside inspection and export screen from original guide"><figcaption>Roadside inspection example from the official guide.</figcaption></figure>
+<div class="callout">Follow the officer's instructions and your carrier's process for the inspection.</div>
+</section>
+<section class="section" id="dvir" data-search="DVIR inspection report truck trailer defects pictures signature upload">
+<h2>Complete a vehicle inspection (DVIR)</h2>
+<div class="step"><span class="stepnum">1</span>Open <b>DVIR</b> or <b>Inspection Reports</b> from the app menu.</div>
+<div class="step"><span class="stepnum">2</span>Start a new inspection using the <b>+</b> button, if shown.</div>
+<div class="step"><span class="stepnum">3</span>Select the correct region and check the items on the list.</div>
+<div class="step"><span class="stepnum">4</span>Mark any defects. Add remarks and photos when needed.</div>
+<div class="step"><span class="stepnum">5</span>Sign the report and tap <b>Upload</b>.</div>
+<figure><img data-image="dvir" alt="Apollo DVIR inspection screen from original guide"><figcaption>DVIR example from the original guide.</figcaption></figure>
+<div class="callout">The guide says up to nine pictures can be added to a DVIR.</div>
+</section>
+<section class="section" id="fix" data-search="troubleshooting problem red bluetooth ECM no internet diagnostics malfunction">
+<h2>Common problems</h2>
+<div class="step"><h3>Bluetooth or ECM is red</h3><ol><li>Turn the truck engine ON.</li><li>Check that Bluetooth is ON.</li><li>Open <b>Scan Devices</b>.</li><li>Select the correct ECM device and check diagnostics again.</li></ol></div>
+<div class="step"><h3>App says “Wrong authentication”</h3><ul><li>Check your username and password.</li><li>Check your internet connection.</li><li>If you are still logged in on another device, contact your carrier.</li></ul></div>
+<div class="step"><h3>App cannot download information</h3><ul><li>Check cellular data or Wi-Fi.</li><li>Confirm your internet connection is working.</li><li>Contact your carrier or ELD support if the issue continues.</li></ul></div>
+<div class="step"><h3>ELD shows a timing problem</h3><p>Check that your phone's date and time are set correctly. The guide says not to change the ELD time manually.</p></div>
+<figure><img data-image="troubleshoot" alt="Apollo ELD diagnostics from original guide"><figcaption>Diagnostic examples from the official guide.</figcaption></figure>
+<div class="good"><b>Still need help?</b> Contact your dispatcher or carrier support. Tell them the exact message on your screen and send a screenshot if requested.</div>
+</section>
+<p class="muted">This quick guide is based on the Apollo ELD Driver Guides supplied by the carrier. It is a simplified reference, not a replacement for official instructions, company policy, or applicable regulations.</p>
+</div>
+</div>
+</main>
+<footer>Driver Help Center · Apollo ELD · Keep this page bookmarked for quick access.</footer>
+<script>
+let platform='ios', current='start';
+const tabs=[...document.querySelectorAll('.tab')];
+const menu=[...document.querySelectorAll('nav button')];
+const sections=[...document.querySelectorAll('.section')];
+function showSection(id){current=id;sections.forEach(s=>s.classList.toggle('active',s.id===id));menu.forEach(b=>b.classList.toggle('active',b.dataset.section===id));}
+function setPlatform(p){platform=p;tabs.forEach(t=>t.classList.toggle('active',t.dataset.platform===p));document.querySelectorAll('img[data-image]').forEach(img=>{img.src='assets/'+platform+'-'+img.dataset.image+'.jpg';});}
+tabs.forEach(t=>t.addEventListener('click',()=>setPlatform(t.dataset.platform)));
+menu.forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.section)));
+document.getElementById('search').addEventListener('input',e=>{
+ const q=e.target.value.toLowerCase().trim();
+ if(!q){menu.forEach(b=>b.classList.remove('hidden'));return;}
+ let first=null;
+ menu.forEach(b=>{const s=document.getElementById(b.dataset.section);const match=(s.innerText+' '+(s.dataset.search||'')).toLowerCase().includes(q);b.classList.toggle('hidden',!match);if(match&&!first)first=b.dataset.section;});
+ if(first)showSection(first);
+});
+setPlatform('ios');
+</script>
+</body></html>
